@@ -12,8 +12,6 @@ x = {}
 y = {}
 
 ref = datetime.datetime.strptime('00:00:00', '%H:%M:%S')
-p = 2
-# interval: 0 - 4, 4 - 8, 8 - 12, 12 - 16, 16 - 20, 20 - 24
 
 for i in range(0,len(s)):
     x[s[i][1]] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -30,11 +28,6 @@ for i in range(0,len(s)):
             dif_delta = datetime.datetime.strptime(s[i][0][11:19], '%H:%M:%S') - ref
             dif = int((dif_delta.seconds / 3600))
             x[s[i][1]][dif] += 1
-            # if count < 20:
-            #     if (s[i][1] == 739):
-            #         print(s[i][0], "   ", dif)
-            #         print(x[s[i][1]])
-            #         count += 1
     y[s[i][1]].append(temp)
 
 sum = {}
@@ -59,7 +52,4 @@ for e in sum:
         first_min_neighbours.append(X_cor[sum[e].index(i)])
     print(e, ": ", first_min_neighbours[1:])
 
-# uu = np.array(x[739]) - np.array(x[6910])
-# print(np.sum(uu))
-# print(round((np.sqrt(sum(np.power((np.array(x[739]) - np.array(x[739])),2)) / 24)),2))
 
