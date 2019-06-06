@@ -7,3 +7,6 @@
 
 2. XGBoost Softmax 与 Softprob 结果不一致
 - XGBoost input label是整数值，不能是one-hot， 即使softprob的output是one-hot。
+
+3. [虚拟机ping不通主机，但是主机可以ping通虚拟机](https://blog.csdn.net/qq_22073849/article/details/54938949)
+- 防火墙高级设置ICMPv4-in 设置成ENABLE
